@@ -113,7 +113,7 @@ GenerationTypes{
 			private String name;
 			private int age;
 
-			User(){              //niezbędne! konstruktor bezargumentowy potrzebny dla Hibernate!
+			User(){              //niezbędne! konstruktor bezargumentowy potrzebny dla Hibernate! do stworzenia nowej instancji
 			}
 
 			(konstruktor...)
