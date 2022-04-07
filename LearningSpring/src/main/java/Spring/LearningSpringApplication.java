@@ -32,6 +32,7 @@ XML - Extensible Markup Language uniwersalny język znaczników służący np do
 YAML - Ain't Markup Language(Na początku miał być Yet Another Markup Language ale koncepcja się zmieniła)
 - Human Readable Data Serialization Language(może robić to samo co XML) jest ustrukturyzowany, nie zawiera dodatkowych znaków
 -(w przeciwieństwie do XML)
+Persistance - trwałość
 
 
 GenerationTypes{
