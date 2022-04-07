@@ -123,6 +123,32 @@ GenerationTypes{
 }
 
 
+@Column{
+	@Column(name = "imie") Ustawienie nazwy kolumny w tabeli
+}
+
+@Table{
+	@Table(name = "user") Ustawienie nazwy dla tabeli
+}
+
+@Id{
+	@Id - wskazanie na id obiektu
+}
+
+@GeneratedValue{
+	@GeneratedValue(strategy = GenerationType.AUTO) - wybiera tryb generowania wartości
+}
+
+@Required{
+		@Required
+  		public void setAge(Integer age) {
+      		this.age = age;
+   		}
+		
+	Ta adnotacja jest stosowana w metodach ustawiania Bean'ów gdy trzeba wymusić jakaś wymaganą właściwość.
+	@Required wskazuje, że dany komponent bean musi zostać wypełniony w czasie konfiguracji wymaganą właściwością.
+	W przeciwnym razie zostanie zgłoszony wyjątek typu BeanInitializationException.
+}
 
 
 
