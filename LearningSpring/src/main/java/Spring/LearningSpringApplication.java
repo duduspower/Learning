@@ -83,7 +83,7 @@ GenerationTypes{
 	przykladowy wygląd pola id encji :
 		@Id
 		@GeneratedValue(strategy = GenerationType.TABLE, generator = "book_generator")
-		@SequenceGenerator(name = "book_generator", table = "id_generator", schema = "book_store")
+		@TableGenerator(name = "book_generator", table = "id_generator", schema = "book_store")
 		private Long id;
 }
 
@@ -99,19 +99,36 @@ GenerationTypes{
 		private Long id;
 }
 
+@Entity{
+	Mówi Hibernate że dany POJO (stary dobry obiekt javowy) jest encja bazodanową
+	(zbiór zależności i atrybutów dla obiektu w bazie danych)
+
+	Przykładowa Encja :
+
+		@Entity														//niezbędne do =======
+		public class User{
+			@Id
+			@GeneratedValue(strategy = GenerationType.Auto)
+			private int id; 										//==========
+			private String name;
+			private int age;
+
+			User(){              //niezbędne! konstruktor bezargumentowy potrzebny dla Hibernate!
+			}
+
+			(konstruktor...)
+			(gettery i settery...)
+		}
+}
 
 
 
 
 
+Skóty klawiszowe{
+	ctrl + alt + s opcje IDE
+	aby wyłączyć sprawdzanie słownika ctrl + alt + s Editor>NaturalLanguages>Spelling
+}
 
-
-
-
-
-
-
-
-ctrl + alt + s opcje IDE
-aby wyłączyć sprawdzanie słownika ctrl + alt + s Editor>NaturalLanguages>Spelling
  */
+
